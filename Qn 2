@@ -1,0 +1,38 @@
+#E-Commerce
+def add_product(product_name, price, quantity):
+    """
+    Creates a dictionary object for a product with the given parameters.
+    Returns the product dictionary.
+    """
+    product = {
+        "product_name": product_name,
+        "price": price,
+        "quantity": quantity
+    }
+    return product
+
+def update_price(product, new_price):
+    """
+    Updates the price of a product in the dictionary.
+    Returns the modified product dictionary.
+    """
+    product["price"] = new_price
+    return product
+
+def update_quantity(product, quantity_change):
+    """
+    Updates the quantity of a product in the dictionary.
+    Returns the modified product dictionary.
+    """
+    product["quantity"] += quantity_change
+    return product
+
+
+initial_product = add_product("Widget", 19.99, 100)
+print("Initial product:", initial_product)
+
+updated_product = update_price(initial_product, 24.99)
+print("Updated product (price):", updated_product)
+
+updated_product = update_quantity(updated_product, -20)
+print("Updated product (quantity):", updated_product)
